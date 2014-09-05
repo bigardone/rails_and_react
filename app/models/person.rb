@@ -18,4 +18,8 @@
 
 class Person < ActiveRecord::Base
   enum gender: [:male, :female]
+
+  def full_name
+    [first_name, last_name].join(' ')
+  end
 end
