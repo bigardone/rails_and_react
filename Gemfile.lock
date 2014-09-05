@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/ctran/annotate_models.git
+  revision: 038b13c04e575cc0f0c89c702c994166c7dc9955
+  specs:
+    annotate (2.6.5)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
+
+GIT
   remote: git://github.com/rails/web-console.git
   revision: 17e4cf195f741aca0e862cfcaef4372daeac8fa1
   specs:
@@ -196,6 +204,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   bitters
   bourbon
   byebug
