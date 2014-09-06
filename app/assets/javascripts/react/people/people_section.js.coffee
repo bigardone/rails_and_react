@@ -1,5 +1,7 @@
 # @cjsx React.DOM
 
+ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
+
 @PeopleSection = React.createClass
   displayName: 'PeopleSection'
 
@@ -27,6 +29,10 @@
   _fetchDataFail: (xhr, status, err) =>
     console.error @props.url, status, err.toString()
 
+  _handleOnSearchSubmit: (search) ->
+    @_fetchPeople
+      search: search
+
   render: ->
     cardsNode = @state.people.map (person) ->
       <PersonCard key={person.id} data={person}/>
@@ -34,18 +40,19 @@
     noDataNode =
       <div className="warning">
         <span className="fa-stack">
-          <i className="fa fa-circle fa-stack-2x"></i>
-          <i className="fa fa-meh-o fa-stack-1x"></i>
+          <i className="fa fa-meh-o fa-stack-2x"></i>
         </span>
-        <h4>No people found.</h4>
+        <h4>No people found...</h4>
       </div>
 
     <div>
-      <PeopleSearch/>
+      <PeopleSearch onFormSubmit={@_handleOnSearchSubmit}/>
       <div className="cards-wrapper">
         {
           if @state.people.length > 0
-            {cardsNode}
+            <ReactCSSTransitionGroup transitionName="card">
+              {cardsNode}
+            </ReactCSSTransitionGroup>
           else if @state.didFetchData
             {noDataNode}
         }
