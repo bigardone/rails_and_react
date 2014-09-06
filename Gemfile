@@ -58,4 +58,5 @@ gem 'react-rails', github: 'reactjs/react-rails'
 gem 'sprockets-coffee-react'
 
 gem 'annotate', github: 'ctran/annotate_models'
+gem 'font-awesome-rails'
 
