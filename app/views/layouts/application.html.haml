@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title RailsAndReact
+    %title Rails and React II: A real use case
     %link{href: "http://fonts.googleapis.com/css?family=Fjalla+One|Average+Sans", rel: "stylesheet", type: "text/css"}/
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -10,3 +10,10 @@
   %body
     #main_wrapper
       = yield
+    %footer#main_footer
+      %small
+        Crafted with ♥ by
+        %a{href: "http://twitter.com/bigardone", target:"_blank"} bigardone
+        %br/
+        Check out the
+        %a{href: "https://github.com/bigardone/rails_and_react", target: '_blank'} source code
