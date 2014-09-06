@@ -64,3 +64,18 @@
         .avatar
           +transform(scale(1.2))
           margin-top: -30px
+
+.card-enter
+  +transition
+  opacity: 0.01
+
+.card-enter.card-enter-active
+  opacity: 1
+
+.card-leave
+  +transition
+  opacity: 1
+
+.card-leave.card-leave-active
+  opacity: 0.01
+
