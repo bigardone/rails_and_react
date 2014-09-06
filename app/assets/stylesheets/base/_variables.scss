@@ -1,24 +1,41 @@
 // Typography
 $sans-serif: $helvetica;
 $serif: $georgia;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$base-font-family: 'Average Sans', sans-serif;
+$header-font-family: 'Fjalla One', sans-serif;
 
 // Sizes
 $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
-$base-border-radius: em(3);
+$base-border-radius: 0;
 
 // Colors
-$blue: #477DCA;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #DDD;
-$light-red: #FBE3E4;
-$light-yellow: #FFF6BF;
-$light-green: #E6EFC2;
+$blue: #3498db;
+$green: #2ecc71;
+$red: #e74c3c;
+$yellow: #f1c40f;
+$orange: #e67e22;
+$purple: #9b59b6;
+$gray: #bdc3c7;
+$asphalt: #34495e;
+$pink: #ff5aec;
+
+$dark-blue: darken($blue, 15);
+$dark-purple: darken($purple, 15);
+$light-gray: lighten($gray, 15);
+$lighter-gray: lighten($gray, 20);
+$medium-gray: darken($gray, 10);
+$dark-gray: darken($gray, 40);
+$light-red: lighten($red, 15);
+$light-yellow: lighten($yellow, 15);
+$light-green: lighten($green, 15);
+$dark-asphalt: darken($asphalt, 7);
+$light-blue: lighten($blue, 20);
+$dark-orange: darken($orange, 15);
+$dark-red: darken($red, 15);
+$light-pink: lighten($pink, 31);
 
 // Background Color
 $base-background-color: white;
