@@ -4,3 +4,27 @@
   .form-wrapper
     +span-columns(4)
     +shift(8)
+
+    [type=search]
+      +transition(all linear .3s)
+      background: rgba(#fff, .5)
+      &::-webkit-input-placeholder
+        color: #fff
+      &:-moz-placeholder
+        color: #fff
+      &::-moz-placeholder
+        color: #fff
+      &:-ms-input-placeholder
+        color: #fff
+
+      &:focus
+        background: #fff
+
+        &::-webkit-input-placeholder
+          color: $gray
+        &:-moz-placeholder
+          color: $gray
+        &::-moz-placeholder
+          color: $gray
+        &:-ms-input-placeholder
+          color: $gray
