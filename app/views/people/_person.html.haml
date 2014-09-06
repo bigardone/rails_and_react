@@ -1,0 +1,24 @@
+.card{class: person.gender}
+  %header
+    .avatar-wrapper
+      &nbsp;
+      %img.avatar{src: person.picture}/
+    .info-wrapper
+      %h4= person.full_name
+      %ul.meta
+        %li
+          = fa_icon 'map-marker'
+          = person.location
+        %li
+          = fa_icon 'birthday-cake'
+          = l(person.birth_date, format: :long)
+  .card-body
+    .headline
+      %p= person.headline
+    %ul.contact-info
+      %li
+        = fa_icon 'phone'
+        = person.phone_number
+      %li
+        = fa_icon 'envelope'
+        = person.email
