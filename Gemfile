@@ -53,6 +53,8 @@ group :production do
 end
 
 gem 'pg'
+gem 'pg_search'
+
 gem 'haml-rails'
 gem 'bourbon'
 gem 'neat'
