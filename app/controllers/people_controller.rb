@@ -1,7 +1,17 @@
 class PeopleController < ApplicationController
-  def index
-    people = Person.all
+  before_filter :search_people
 
-    render json: people
+  def index
+    render json: @people
+  end
+
+  private
+
+  def search_people
+    @people =  if params[:search].present?
+      Person.search(params[:search])
+    else
+      Person.all
+    end.sorted
   end
 end
