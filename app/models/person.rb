@@ -35,8 +35,4 @@ class Person < ActiveRecord::Base
                       normalization: 2
                     }
                   }
-
-  def full_name
-    [first_name, last_name].join(' ')
-  end
 end
