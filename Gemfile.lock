@@ -1,10 +1,31 @@
 GIT
+  remote: git://github.com/caarlos0/nprogress-rails.git
+  revision: 82754d5d75c514edb4e706c98e84e43eb9f6e2fd
+  specs:
+    nprogress-rails (0.1.3.1)
+
+GIT
   remote: git://github.com/ctran/annotate_models.git
   revision: 038b13c04e575cc0f0c89c702c994166c7dc9955
   specs:
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
+
+GIT
+  remote: git://github.com/derekprior/momentjs-rails.git
+  revision: 12f6d703d15a68228e8cd938a0a8a48c8f5e7a35
+  specs:
+    momentjs-rails (2.8.1)
+      railties (>= 3.1)
+
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 325dc3a81207db9a9fdbbaa1bea76768db2ae8c3
+  specs:
+    active_model_serializers (0.10.0.pre)
+      activesupport (>= 4.0)
+      rails (>= 4.0)
 
 GIT
   remote: git://github.com/rails/rails.git
@@ -81,6 +102,14 @@ GIT
       binding_of_caller (= 0.7.3.pre1)
       railties (~> 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+
+GIT
+  remote: git://github.com/railsware/js-routes.git
+  revision: 5f31f200f577519c5d946b17d3c6358a7e9fe2c0
+  specs:
+    js-routes (0.9.9)
+      railties (>= 3.2)
+      sprockets-rails
 
 GIT
   remote: git://github.com/reactjs/react-rails.git
@@ -223,6 +252,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   annotate!
   bitters
   bourbon
@@ -233,8 +263,11 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  js-routes!
+  momentjs-rails!
   neat
   newrelic_rpm
+  nprogress-rails!
   pg
   rails!
   rails-html-sanitizer (~> 1.0)
