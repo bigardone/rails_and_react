@@ -32,5 +32,8 @@ module RailsAndReact
 
     # sass over scss
     config.sass.preferred_syntax = :sass
+
+    # React config
+    config.react.addons = true
   end
 end
