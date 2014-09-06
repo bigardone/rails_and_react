@@ -28,7 +28,13 @@ class Person < ActiveRecord::Base
                     :last_name,
                     :location,
                     :headline
-                  ]
+                  ],
+                  using: {
+                    tsearch: {
+                      prefix: true,
+                      normalization: 2
+                    }
+                  }
 
   def full_name
     [first_name, last_name].join(' ')
