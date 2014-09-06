@@ -62,6 +62,7 @@ gem 'newrelic_rpm'
 
 gem 'react-rails', github: 'reactjs/react-rails'
 gem 'sprockets-coffee-react'
+gem "active_model_serializers", github: 'rails-api/active_model_serializers'
 
 gem 'annotate', github: 'ctran/annotate_models'
 gem 'font-awesome-rails'

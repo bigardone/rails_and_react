@@ -7,6 +7,14 @@ GIT
       rake (>= 0.8.7)
 
 GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 325dc3a81207db9a9fdbbaa1bea76768db2ae8c3
+  specs:
+    active_model_serializers (0.10.0.pre)
+      activesupport (>= 4.0)
+      rails (>= 4.0)
+
+GIT
   remote: git://github.com/rails/rails.git
   revision: 381f9931ec533dd9003f6e7224d7461b93f2fb24
   specs:
@@ -223,6 +231,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   annotate!
   bitters
   bourbon
