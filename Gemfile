@@ -67,3 +67,7 @@ gem "active_model_serializers", github: 'rails-api/active_model_serializers'
 gem 'annotate', github: 'ctran/annotate_models'
 gem 'font-awesome-rails'
 
+gem 'nprogress-rails', github: 'caarlos0/nprogress-rails'
+gem 'momentjs-rails', github: 'derekprior/momentjs-rails'
+gem "js-routes", github: 'railsware/js-routes'
+
