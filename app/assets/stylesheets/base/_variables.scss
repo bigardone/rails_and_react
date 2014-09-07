@@ -68,3 +68,6 @@ $form-box-shadow: 0 0 0;
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
+
+// Nprogress bar
+$nprogress-color: $yellow;

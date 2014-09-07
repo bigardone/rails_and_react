@@ -10,3 +10,9 @@
 #= require nprogress-ajax
 
 #= require_tree ./react
+
+$ ->
+  NProgress.configure
+    showSpinner: false
+    ease: 'ease'
+    speed: 500
