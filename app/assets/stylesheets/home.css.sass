@@ -1,13 +1,22 @@
 section
   header
     color: #fff
+    margin-bottom: 1em
+
+    +media($mobile)
+      h1
+        font-size: 1.4em
+    +media($tablet)
+      h1
+        font-size: 1.6rem
 
 .filter-wrapper
   +clearfix
   margin-bottom: 2rem
   .form-wrapper
-    +span-columns(4)
-    +shift(8)
+    +media($desktop)
+      +span-columns(4)
+      +shift(8)
 
     [type=search]
       +transition(all linear .3s)

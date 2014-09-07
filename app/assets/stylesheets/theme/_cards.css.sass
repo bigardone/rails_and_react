@@ -2,11 +2,20 @@
   +clearfix
   position: relative
   .card
-    +span-columns(4)
-    +omega(3n)
-
     background: #fff
     margin-bottom: 2rem
+
+    +media($mobile)
+      +span-columns(12 of 12)
+      +omega(2n)
+
+    +media($tablet)
+      +span-columns(6 of 12)
+      +omega(2n)
+
+    +media($desktop)
+      +span-columns(4 of 12)
+      +omega(3n)
 
     header
       +pad(1rem)

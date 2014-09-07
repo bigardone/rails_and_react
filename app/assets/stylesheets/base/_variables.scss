@@ -71,3 +71,8 @@ $form-font-family: $base-font-family;
 
 // Nprogress bar
 $nprogress-color: $yellow;
+
+// Breakpoints
+$mobile: new-breakpoint(max-width 480px);
+$tablet: new-breakpoint(min-width 481px max-width 768px);
+$desktop: new-breakpoint(min-width 769px);
