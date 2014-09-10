@@ -12,6 +12,6 @@ class PeopleController < ApplicationController
       Person.search(params[:search])
     else
       Person.all
-    end.sorted
+    end.sorted.page(params[:page])
   end
 end
