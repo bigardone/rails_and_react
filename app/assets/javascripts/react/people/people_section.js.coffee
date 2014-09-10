@@ -59,7 +59,7 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
       </div>
 
     <div>
-      <PeopleSearch onFormSubmit={@_handleOnSearchSubmit}/>
+      <PeopleSearch meta={@state.meta} onFormSubmit={@_handleOnSearchSubmit}/>
       <PaginatorSection meta={@state.meta} onPaginate={@_handleOnPaginate}/>
       <div className="cards-wrapper">
         {
