@@ -73,3 +73,4 @@ gem 'nprogress-rails', github: 'caarlos0/nprogress-rails'
 gem 'momentjs-rails', github: 'derekprior/momentjs-rails'
 gem "js-routes", github: 'railsware/js-routes'
 
+gem 'kaminari'
