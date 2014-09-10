@@ -24,7 +24,7 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
     return false unless @isMounted()
     @setState
       didFetchData: true
-      people: data
+      people: data.people
 
   _fetchDataFail: (xhr, status, err) =>
     console.error @props.url, status, err.toString()
