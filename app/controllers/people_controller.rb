@@ -2,7 +2,16 @@ class PeopleController < ApplicationController
   before_filter :search_people
 
   def index
-    render json: @people
+    render json: {
+      people: @people,
+      meta: {
+        current_page: @people.current_page,
+        next_page: @people.next_page,
+        prev_page: @people.prev_page,
+        total_pages: @people.total_pages,
+        total_count: @people.total_count
+      }
+    }
   end
 
   private
