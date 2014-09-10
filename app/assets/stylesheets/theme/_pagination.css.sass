@@ -1,4 +1,4 @@
-$pagination-padding: .7em
+$pagination-size: em(25)
 
 .pagination
   +clearfix
@@ -8,10 +8,16 @@ $pagination-padding: .7em
     display: inline-block
     a
       background: #fff
-      margin-left: 1px
-      padding: $pagination-padding
+      margin-left: .2em
+      width: $pagination-size
+      height: $pagination-size
+      border-radius: 50%
+      display: inline-block
 
     span
       color: #fff
-      padding: $pagination-padding
+      width: $pagination-size
+      height: $pagination-size
+      display: inline-block
+
 

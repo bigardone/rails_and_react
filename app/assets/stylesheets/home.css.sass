@@ -13,10 +13,15 @@ section
 .filter-wrapper
   +clearfix
   margin-bottom: 2rem
+
+  .overview-wrapper
+    color: #fff
+
+    +media($desktop)
+      +span-columns(8)
   .form-wrapper
     +media($desktop)
       +span-columns(4)
-      +shift(8)
 
     [type=search]
       +transition(all linear .3s)
@@ -49,4 +54,7 @@ section
   .fa-stack
     font-size: 3em
     margin-bottom: 2rem
+
+.relative
+  position: relative
 
