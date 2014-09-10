@@ -8,15 +8,20 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
   getInitialState: ->
     didFetchData: false
     people: []
+    meta:
+      total_pages: 0
+    fetchData:
+      search: ''
+      onPaginate: 1
 
   componentDidMount: ->
     @_fetchPeople({})
 
-  _fetchPeople: (data)->
+  _fetchPeople: ()->
     $.ajax
       url: Routes.people_path()
       dataType: 'json'
-      data: data
+      data: @state.fetchData
     .done @_fetchDataDone
     .fail @_fetchDataFail
 
@@ -25,13 +30,21 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
     @setState
       didFetchData: true
       people: data.people
+      meta: data.meta
 
   _fetchDataFail: (xhr, status, err) =>
     console.error @props.url, status, err.toString()
 
   _handleOnSearchSubmit: (search) ->
-    @_fetchPeople
+    @state.fetchData=
       search: search
+      page: 1
+
+    @_fetchPeople()
+
+  _handleOnPaginate: (pageNumber) ->
+    @state.fetchData.page = pageNumber
+    @_fetchPeople()
 
   render: ->
     cardsNode = @state.people.map (person) ->
@@ -47,6 +60,7 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
 
     <div>
       <PeopleSearch onFormSubmit={@_handleOnSearchSubmit}/>
+      <PaginatorSection meta={@state.meta} onPaginate={@_handleOnPaginate}/>
       <div className="cards-wrapper">
         {
           if @state.people.length > 0
