@@ -8,6 +8,7 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require nprogress-ajax
+#= require pubsub
 
 #= require_tree ./react
 
