@@ -8,4 +8,4 @@
     @props.onPaginatorLinkClick(@props.pageNumber)
 
   render: ->
-    <a href="#" onClick={@_handleOnClick}>{@props.pageNumber}</a>
+    <a href="#" onClick={@_handleOnClick}>&nbsp;</a>
