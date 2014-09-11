@@ -3,14 +3,27 @@
 @PeopleSearch = React.createClass
   displayName: 'PeopleSearch'
 
+  componentDidMount: ->
+    @_subscribeToEvents()
+
+  _subscribeToEvents: ->
+    PubSub.subscribe 'resetButton:onClick', ()=>
+      @refs.search.getDOMNode().value = ''
+
   _handleOnSubmit: (e) ->
     e.preventDefault()
 
     searchValue = @refs.search.getDOMNode().value.trim()
     @props.onFormSubmit(searchValue)
 
+  _personText: (count) ->
+    if count > 1 then 'people' else 'person'
+
   render: ->
-    overviewTitle = if @props.meta.total_count > 0 then "#{@props.meta.total_count} people found"
+    count = @props.meta.total_count
+    personText = @_personText(count)
+    overviewTitle = if @props.meta.total_count > 0 then "#{count} #{personText} found"
+
     <div className="filter-wrapper">
       <div className="overview-wrapper">
         <h3>{overviewTitle}</h3>

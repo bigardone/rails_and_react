@@ -1,7 +1,5 @@
 # @cjsx React.DOM
 
-ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
-
 @PeopleSection = React.createClass
   displayName: 'PeopleSection'
 
@@ -15,7 +13,16 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
       onPaginate: 1
 
   componentDidMount: ->
+    @_subscribeToEvents()
     @_fetchPeople({})
+
+  _subscribeToEvents: ->
+    PubSub.subscribe 'resetButton:onClick', ()=>
+      @state.fetchData =
+        search: ''
+        onPaginate: 1
+
+      @_fetchPeople()
 
   _fetchPeople: ()->
     $.ajax
@@ -56,6 +63,7 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
           <i className="fa fa-meh-o fa-stack-2x"></i>
         </span>
         <h4>No people found...</h4>
+        <ResetButton text="Show me everybody" />
       </div>
 
     <div>
@@ -64,11 +72,10 @@ ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
       <div className="cards-wrapper">
         {
           if @state.people.length > 0
-            <ReactCSSTransitionGroup transitionName="card">
-              {cardsNode}
-            </ReactCSSTransitionGroup>
+            {cardsNode}
           else if @state.didFetchData
             {noDataNode}
         }
       </div>
+      <PaginatorSection meta={@state.meta} onPaginate={@_handleOnPaginate}/>
     </div>
