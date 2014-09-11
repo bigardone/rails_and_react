@@ -1,4 +1,4 @@
-$pagination-size: em(25)
+$size: em(14)
 
 .pagination
   +clearfix
@@ -6,18 +6,16 @@ $pagination-size: em(25)
   text-align: center
   li
     display: inline-block
-    a
-      background: #fff
-      margin-left: .2em
-      width: $pagination-size
-      height: $pagination-size
-      border-radius: 50%
+    a, span
+      background: $blue
+      margin-left: $size/2
       display: inline-block
+      border-radius: 50%
+      width: $size
+      height: $size
 
     span
-      color: #fff
-      width: $pagination-size
-      height: $pagination-size
-      display: inline-block
+      background: #fff
+
 
 
