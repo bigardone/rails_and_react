@@ -8,6 +8,8 @@
     people: []
     meta:
       total_pages: 0
+      current_page: 1
+      total_count: 0
     fetchData:
       search: ''
       onPaginate: 1
@@ -73,8 +75,8 @@
       </div>
 
     <div>
-      <PeopleSearch meta={@state.meta} onFormSubmit={@_handleOnSearchSubmit}/>
-      <PaginatorSection meta={@state.meta} onPaginate={@_handleOnPaginate}/>
+      <PeopleSearch totalCount={@state.meta.total_count} onFormSubmit={@_handleOnSearchSubmit}/>
+      <PaginatorSection totalPages={@state.meta.total_pages} currentPage={@state.meta.current_page} onPaginate={@_handleOnPaginate}/>
       <div className="cards-wrapper">
         {
           if @state.people.length > 0
@@ -83,5 +85,5 @@
             {noDataNode}
         }
       </div>
-      <PaginatorSection meta={@state.meta} onPaginate={@_handleOnPaginate}/>
+      <PaginatorSection totalPages={@state.meta.total_pages} currentPage={@state.meta.current_page} onPaginate={@_handleOnPaginate}/>
     </div>
