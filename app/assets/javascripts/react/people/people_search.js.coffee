@@ -26,9 +26,9 @@
     if count > 1 then 'people' else 'person'
 
   render: ->
-    count = @props.meta.total_count
+    count = @props.totalCount
     personText = @_personText(count)
-    overviewTitle = if @props.meta.total_count > 0 then "#{count} #{personText} found"
+    overviewTitle = if @props.totalCount > 0 then "#{count} #{personText} found"
 
     <div className="filter-wrapper">
       <div className="overview-wrapper">
