@@ -12,7 +12,7 @@
       total_count: 0
     fetchData:
       search: ''
-      onPaginate: 1
+      page: 1
 
   componentDidMount: ->
     @_subscribeToEvents()
@@ -25,7 +25,7 @@
     PubSub.subscribe 'resetButton:onClick', ()=>
       @state.fetchData =
         search: ''
-        onPaginate: 1
+        page: 1
 
       @_fetchPeople()
 
