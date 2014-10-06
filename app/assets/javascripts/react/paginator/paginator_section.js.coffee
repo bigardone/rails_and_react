@@ -3,7 +3,7 @@
 @PaginatorSection = React.createClass
   displayName: 'PaginatorSection'
 
-  handleOnClick: (pageNumber) ->
+  _handleOnClick: (pageNumber) ->
     @props.onPaginate(pageNumber)
 
   render: ->
@@ -16,7 +16,7 @@
                 if i == @props.currentPage
                   <span>&nbsp;</span>
                 else
-                  <PaginatorLink pageNumber={i} onPaginatorLinkClick={@handleOnClick} />
+                  <PaginatorLink pageNumber={i} onPaginatorLinkClick={@_handleOnClick} />
               }
             </li>
         }
