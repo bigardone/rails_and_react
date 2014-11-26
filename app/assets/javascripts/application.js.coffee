@@ -10,6 +10,7 @@
 #= require nprogress-ajax
 #= require pubsub
 
+#= require_tree ./utils
 #= require_tree ./react
 
 $ ->
