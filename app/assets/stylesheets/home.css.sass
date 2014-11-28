@@ -23,9 +23,17 @@ section
     +media($desktop)
       +span-columns(4)
 
+    position: relative
+
+    .reset
+      position: absolute
+      right: .5em
+      top: .4em
+
     [type=search]
       +transition(all linear .3s)
       background: rgba(#fff, .5)
+      display: inline-block
       &::-webkit-input-placeholder
         color: #fff
       &:-moz-placeholder
