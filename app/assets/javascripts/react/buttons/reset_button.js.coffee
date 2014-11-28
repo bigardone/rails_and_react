@@ -8,5 +8,5 @@
     PubSub.publish 'resetButton:onClick'
 
   render: ->
-    <a className="btn" href="#" onClick={@_handleOnClick}>{@props.text}</a>
+    <a className={@props.styleClass} href="#" onClick={@_handleOnClick}>{@props.text}</a>
 
