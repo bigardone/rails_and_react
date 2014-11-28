@@ -71,7 +71,7 @@
           <i className="fa fa-meh-o fa-stack-2x"></i>
         </span>
         <h4>No people found...</h4>
-        <ResetButton text="Show me everybody" />
+        <ResetButton text="Reset filter" styleClass="btn" />
       </div>
 
     <div>
