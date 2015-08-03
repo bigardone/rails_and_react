@@ -5,3 +5,9 @@ This is a real use case application using:
 * Rails 4.2.0 beta
 * React.js
 * PostgreSQL full-text search
+
+=== Installation
+* Clone repo.
+* bundle install
+* rake db:setup
+* rails s
