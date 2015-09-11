@@ -19,7 +19,7 @@
 class Person < ActiveRecord::Base
   include PgSearch
 
-  enum gender: [:male, :female]
+  enum genders: [:male, :female]
 
   scope :sorted, ->{ order(first_name: :asc) }
   pg_search_scope :search,
